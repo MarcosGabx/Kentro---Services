@@ -1,6 +1,6 @@
 const axios = require("axios").default;
 const xlsx = require("xlsx");
-const filePath = "./planilhaopkentro.xlsx"; // Caminho para o arquivo .xlsx
+const filePath = "./docsparauso/planilhaopkentro.xlsx"; // Caminho para o arquivo .xlsx
 
 // Função para ler os dados da planilha
 function readExcel(filePath) {
