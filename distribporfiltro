@@ -1,0 +1,16 @@
+//LEMBRANDO QUE É NECESSÁRIO REALIZAR AS REQUISIÇÕES DOS USUÁRIOS PARA QUE O FUNCIONAMENTO DA CONTAGEM DE CHATS SEJA REALIZADO! 
+
+// Criando um objeto com os agentes e seus chats
+const agentes = [
+    { id: 502, chatsCount: vars['agente1_parsedBody'].chatsCount },
+    { id: 587, chatsCount: vars['agente2_parsedBody'].chatsCount },
+    { id: 542, chatsCount: vars['agente3_parsedBody'].chatsCount }
+];
+
+// Encontrando o agente com menos chats
+const agenteMenosChats = agentes.reduce((prev, current) => 
+    prev.chatsCount < current.chatsCount ? prev : current
+);
+
+// Variável para armazenar o ID do agente com menos chats
+vars['agenteSelecionado'] = agenteMenosChats.id;
